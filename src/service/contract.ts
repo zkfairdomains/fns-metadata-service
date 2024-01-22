@@ -7,7 +7,7 @@ import {
   INAMEWRAPPER,
 } from '../config';
 import { getLabelhash } from '../utils/labelHash';    
-import { getNamehash } from '../utils/namehash';
+import { getNamehash } from '../utils/getNamehash';
 
  
 

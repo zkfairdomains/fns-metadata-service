@@ -18,7 +18,7 @@ import { checkContract }           from '../service/contract';
 import { getDomain }               from '../service/domain';
 import { Metadata }                from '../service/metadata';
 import getNetwork, { NetworkName } from '../service/network';
-import { constructEthNameHash }    from '../utils/namehash';
+import { constructEthNameHash }    from '../utils/getNamehash';
 
 export async function ensMetadata(req: Request, res: Response) {
 
