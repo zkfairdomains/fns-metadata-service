@@ -1,4 +1,4 @@
-
+ 
 import { utils, BigNumber, ethers } from 'ethers';
 import { Version }                  from '../base';
 
