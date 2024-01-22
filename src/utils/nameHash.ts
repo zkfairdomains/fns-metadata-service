@@ -1,4 +1,4 @@
-import { namehash }                 from '@ensdomains/ensjs/utils';
+
 import { utils, BigNumber, ethers } from 'ethers';
 import { Version }                  from '../base';
 
@@ -41,6 +41,7 @@ export function getNamehash(nameOrNamehash: string) {
    // return nameOrNamehash;
  // }
 
-  const _lhexId = namehash(nameOrNamehash);
-  return _lhexId;
+  //const _lhexId = namehash(nameOrNamehash);
+  //return _lhexId;
+  return nameOrNamehash;
 }
