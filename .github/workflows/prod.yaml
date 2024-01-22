@@ -21,6 +21,7 @@ jobs:
             git pull origin
             corepack enable
             yarn install
-            pm2 start fns-metadata-service
+            yarn build
+            pm2 restart fns-metadata-service
             echo 'Deployment successful...' 
  

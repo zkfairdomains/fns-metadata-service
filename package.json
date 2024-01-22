@@ -39,7 +39,7 @@
     "ssrf-req-filter": "^1.0.6",
     "timeout-signal": "^1.0.0",
     "tsc": "^2.0.3",
-    "viem": "^2.4.0"
+    "viem": "^2.4.1"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",

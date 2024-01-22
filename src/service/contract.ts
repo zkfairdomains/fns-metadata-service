@@ -6,7 +6,7 @@ import {
   ADDRESS_ETH_REGISTRAR, 
   INAMEWRAPPER,
 } from '../config';
-import { getLabelhash } from '../utils/labelHash'; 
+import { getLabelhash } from '../utils/labelHash';    
 import { getNamehash } from '../utils/namehash';
 
  

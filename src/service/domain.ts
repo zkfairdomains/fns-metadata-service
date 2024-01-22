@@ -115,7 +115,7 @@ export async function getDomain(
       //  `https://metadata.zkfair.domains/${networkName}/avatar/${name}`
       //);
       metadata.setImage(
-         `https://metadata.zkfair.domains/${networkName}/${contractAddress}/${hexId}/image`
+        `https://metadata.zkfair.domains/${networkName}/${contractAddress}/${hexId}/image`
       );
     }
   }
