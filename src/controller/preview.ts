@@ -14,7 +14,7 @@ export async function preview(req: Request, res: Response) {
   const { name } = req.params;
 
   try {
-    if (!name || name.length < 7 || !name.endsWith('.eth')) {
+    if (!name || name.length < 7 || !name.endsWith('.zkf')) {
       throw Error(`${name} is not an ENS name.`);
     }
     const metadata = new Metadata({
