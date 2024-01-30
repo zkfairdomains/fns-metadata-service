@@ -20,6 +20,7 @@ export const NETWORK = {
   ROPSTEN: 'ropsten',
   GOERLI : 'goerli',
   MAINNET: 'mainnet',
+  ZKFAIR: 'zkfair',
 } as const;
 
 export type NetworkName = typeof NETWORK[keyof typeof NETWORK];
@@ -59,7 +60,10 @@ export default function getNetwork(network: NetworkName): {
         'https://api.thegraph.com/subgraphs/name/zkfairdomains/zkf-subgraph-goerli';
       break;
     case NETWORK.MAINNET:
-      SUBGRAPH_URL = 'https://api.thegraph.com/subgraphs/name/zkfairdomains/fns-subgraph';
+      SUBGRAPH_URL = '';
+      break;
+    case NETWORK.ZKFAIR:
+      SUBGRAPH_URL = 'https://graphql.zkfair.domains/subgraphs/name/zkfairdomains/zkf-subgraph';
       break;
     default:
       throw new UnsupportedNetwork(`Unknown network '${network}'`, 501);

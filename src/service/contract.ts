@@ -70,9 +70,9 @@ export async function checkContract(
     provider
   );  
 
-  if (_contractAddress === ADDRESS_ETH_REGISTRAR) {
+  //if (_contractAddress === ADDRESS_ETH_REGISTRAR) {
     return checkV1Contract(contract, identifier, provider);
-  } else {
-    return checkV2Contract(contract, identifier);
-  }
+  //} else {
+  //  return checkV2Contract(contract, identifier);
+  //}
 }
