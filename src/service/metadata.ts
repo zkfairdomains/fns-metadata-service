@@ -260,6 +260,7 @@ export class Metadata {
 
   static _getFontSize(name: string): number {
     if (!this.ctx) {
+      console.log("ctx var");
       try {
         registerFont(CANVAS_FONT_PATH, { family: 'Satoshi' });
         registerFont(CANVAS_EMOJI_FONT_PATH, { family: 'Noto Color Emoji' });
