@@ -11,9 +11,7 @@ const FONT_FOLDER = path.join((ENV === 'local' ? 'src' : 'dist'), 'assets');
 const CANVAS_FONT_PATH = path.join(FONT_FOLDER, 'Satoshi-Bold.ttf');
 const CANVAS_EMOJI_FONT_PATH = path.join(FONT_FOLDER, 'NotoColorEmoji.ttf');
 const INAMEWRAPPER = process.env.INAMEWRAPPER || '0xd82c42d8';
-console.log("FONT_FOLDER: "+ FONT_FOLDER);
-console.log("CANVAS_FONT_PATH: "+ CANVAS_FONT_PATH);
-console.log("CANVAS_EMOJI_FONT_PATH: "+ CANVAS_EMOJI_FONT_PATH);
+ 
 
 const IPFS_GATEWAY = process.env.IPFS_GATEWAY || 'https://ipfs.io';
 const INFURA_API_KEY = process.env.INFURA_API_KEY || '';

@@ -205,19 +205,13 @@ export class Metadata {
 
   processDomain(domain: string) {
     let charSegmentLength = getSegmentLength(domain);
-    console.log("charSegmentLength: "+ charSegmentLength);
 
     if (charSegmentLength > Metadata.MAX_CHAR) {
       domain = Metadata._textEllipsis(domain);
       charSegmentLength = Metadata.MAX_CHAR;
-    }
-
-    console.log("domain: "+ domain);
-    console.log("charSegmentLength: "+ charSegmentLength);
+    } 
 
     let domainFontSize = Metadata._getFontSize(domain);
-
-    console.log("domainFontSize: "+ domainFontSize);
     
     if (charSegmentLength > 25) {
       domain = this._addSpan(domain, charSegmentLength / 2);
@@ -259,8 +253,7 @@ export class Metadata {
   }
 
   static _getFontSize(name: string): number {
-    if (!this.ctx) {
-      console.log("ctx var");
+    if (!this.ctx) { 
       try {
         registerFont(CANVAS_FONT_PATH, { family: 'Satoshi' });
         registerFont(CANVAS_EMOJI_FONT_PATH, { family: 'Noto Color Emoji' });
@@ -274,11 +267,7 @@ export class Metadata {
         '20px Satoshi, Noto Color Emoji, Apple Color Emoji, sans-serif';
     }
 
-    console.log("CANVAS_FONT_PATH: "+ CANVAS_FONT_PATH);
-    console.log("CANVAS_EMOJI_FONT_PATH: "+ CANVAS_EMOJI_FONT_PATH);
-
     const fontMetrics = this.ctx.measureText(name);
-    console.log("fontMetrics: "+ JSON.stringify(fontMetrics));
 
     const fontSize = Math.floor(20 * (200 / fontMetrics.width));
     return fontSize < 34 ? fontSize : 32;
