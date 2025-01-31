@@ -80,6 +80,8 @@ app.listen(PORT, () => {
   console.log(`APP_LOG::App listening on port ${PORT}`);
 });
 
-app.get('/favicon.ico', (req, res) => res.status(204).end());
+app.get('/favicon.ico', (req: Request, res: Response) => {
+  res.status(204).end();
+});
 
 module.exports = app;
