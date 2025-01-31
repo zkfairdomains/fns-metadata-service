@@ -19,6 +19,7 @@ export const NETWORK = {
   RINKEBY: 'rinkeby',
   ROPSTEN: 'ropsten',
   GOERLI : 'goerli',
+  SEPOLIA : 'sepolia',
   MAINNET: 'mainnet',
   ZKFAIR: 'zkfair',
 } as const;
@@ -53,8 +54,12 @@ export default function getNetwork(network: NetworkName): {
 } {
   // currently subgraphs used under this function are outdated,
   // we will have namewrapper support and more attributes when latest subgraph goes to production
-  let SUBGRAPH_URL: string;
+  let SUBGRAPH_URL: any;
+  
   switch (network) { 
+    case NETWORK.SEPOLIA:
+      SUBGRAPH_URL = process.env.GRAPH_API_URL?.toString()
+      break;
     case NETWORK.GOERLI:
       SUBGRAPH_URL =
         'https://api.thegraph.com/subgraphs/name/zkfairdomains/zkf-subgraph-goerli';
